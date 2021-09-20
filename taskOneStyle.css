@@ -1,32 +1,30 @@
-#date {
-    color: gray;
-    font-style: italic;
-}
-h2{
-    font-size: medium;
-}
-body {
-    font-family: 'Futura', 'Verdana', 'Impact', sans-serif;
+.container {
+    width: auto;
+    height: 900px;
+    display: flex;
+    /*Gives space dependent on the Main Axis*/
+    justify-content: space-around;
+    /*Default alignment for all of the container's childrens*/
+    align-items: flex-start;
 }
 
-.node{
-    border-top-style: solid;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-left-style: none;
-    color: red;
-    background-color: rgb(228, 226, 226);
-    border-color: black;
-    border-width: 1px;
-    font-family:'system-ui';
+.item-One {
+    /*This item does not shrink whenever browser size is changed*/
+    flex-shrink: 0;
+    /*Aligns the item at the end of the container*/
+    align-self: flex-end;
 }
-.keyword {
-    text-decoration: line-through;
+
+.item.two {
+    /*This item gains twice the available space of when the browser change sizes*/
+    flex-grow: 2;
+    /*Aligns the item at the center of the container*/
+    align-self: center;
 }
-#code {
-    color: blue;
-    font-weight: bold;
-    background-color: rgb(224, 226, 226);
-    border-style: double;
-    border-color: gray
+
+.item-three {
+    /*flex-basis tells the item when to start growing from*/
+    flex-basis: 0;
+    /*Aligns the item at the top of the container*/
+    align-self: flex-start;
 }
