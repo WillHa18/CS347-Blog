@@ -1,30 +1,33 @@
-.container {
-    width: auto;
-    height: 900px;
-    display: flex;
-    /*Gives space dependent on the Main Axis*/
-    justify-content: space-around;
-    /*Default alignment for all of the container's childrens*/
-    align-items: flex-start;
+.parent {
+
 }
 
-.item-One {
-    /*This item does not shrink whenever browser size is changed*/
-    flex-shrink: 0;
-    /*Aligns the item at the end of the container*/
-    align-self: flex-end;
+/*Elements are placed based on how they were typed in document*/
+.child-One {
+    position: static
 }
 
-.item.two {
-    /*This item gains twice the available space of when the browser change sizes*/
-    flex-grow: 2;
-    /*Aligns the item at the center of the container*/
-    align-self: center;
+/*Element can move based on these four arguments*/
+.child-Two {
+    position: relative;
+    top: 10px;
+    left: 25px;
+    bottom: 35px;
+    right: 8px;
 }
 
-.item-three {
-    /*flex-basis tells the item when to start growing from*/
-    flex-basis: 0;
-    /*Aligns the item at the top of the container*/
-    align-self: flex-start;
+/*Element cannot be seen, and elements around cannot move*/
+.child-Three {
+    position: absolute
+}
+
+/*Element cannot move from it's origin position*/
+.child-Four {
+    position: fixed
+}
+
+/*Element can move until it hits the top which then cause it position 
+  to become fixed*/
+.child-Five {
+    position: sticky
 }
